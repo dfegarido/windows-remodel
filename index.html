@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FREE Windows Quote from a Contractor Near your Location</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#footer" class="skip-link">Skip to footer</a>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <p>Speak with a Contractor: <a href="tel:8773858090" class="phone-link">(877) 385-8090</a></p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="https://homezies.com/wp-content/uploads/2025/05/logo-v2.webp" alt="Homezies Logo" class="logo-img">
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#main-content">Home</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#articles">Articles</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-wrapper">
+                    <div class="hero-left">
+                        <h2 class="hero-subtitle">Let There Be Light!</h2>
+                        <h2 class="hero-subtitle-2">CONNECT with Expert Contractors TODAY!</h2>
+                        <h1 class="hero-title">FREE Windows Quote from a Contractor Near your Location</h1>
+                        <h3 class="hero-subheading">Speak With a Professional Within Minutes!!</h3>
+                        
+                        <div class="features">
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Search Local Dealers</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Review Top Brands</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Compare Multiple Quotes</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Find The Best Deals</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-right">
+                        <!-- Mobile Click to Call Section -->
+                        <div class="mobile-call-section">
+                            <div class="call-header">
+                                <h3 class="call-title">Get Your FREE Windows Quote</h3>
+                                <p class="call-subtitle">Speak with a Professional Within Minutes!</p>
+                            </div>
+                            
+                            <div class="call-content">
+                                <div class="call-features">
+                                    <div class="call-feature-item">
+                                        <span class="call-icon">✓</span>
+                                        <span>No dates required today</span>
+                                    </div>
+                                    <div class="call-feature-item">
+                                        <span class="call-icon">✓</span>
+                                        <span>Get quotes anytime</span>
+                                    </div>
+                                    <div class="call-feature-item">
+                                        <span class="call-icon">✓</span>
+                                        <span>Connect with local pros</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="call-button-wrapper">
+                                    <a href="tel:8773858090" class="call-button">
+                                        <span class="call-button-icon">📞</span>
+                                        <span class="call-button-text">Call Now</span>
+                                        <span class="call-button-phone">(877) 385-8090</span>
+                                    </a>
+                                    <p class="call-note">Call within business hours<br><strong>Mon–Fri, 8 AM – 7 PM EST</strong></p>
+                                </div>
+                                
+                                <div class="call-benefits">
+                                    <h4>What You'll Get:</h4>
+                                    <ul>
+                                        <li>Free estimates from local contractors</li>
+                                        <li>Compare multiple quotes</li>
+                                        <li>Expert advice and recommendations</li>
+                                        <li>No obligation, completely free</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Desktop Form Section -->
+                        <div class="form-section desktop-form">
+                            <h3 class="form-title">Check out 2025 Trending Window Styles</h3>
+                            
+                            <!-- Progress Bar -->
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+                                </div>
+                                <div class="progress-text">
+                                    <span id="progressPercent">0%</span>
+                                </div>
+                            </div>
+
+                            <form id="quote-form" class="quote-form">
+                                <!-- Step 1: Zip Code -->
+                                <div class="form-step active" id="step1">
+                                    <h2 class="step-title">What is your Zip Code?</h2>
+                                    <div class="form-group">
+                                        <input 
+                                            type="text" 
+                                            id="zipcode" 
+                                            name="zipcode" 
+                                            placeholder="Enter your zip code" 
+                                            pattern="[0-9]{5}" 
+                                            maxlength="5"
+                                            required
+                                        >
+                                    </div>
+                                    <div class="step-navigation">
+                                        <button type="button" class="btn-primary" onclick="nextStep(1)">Next <span class="arrow-icon">→</span></button>
+                                    </div>
+                                    <p class="form-note">Why do we ask?<br>Your zip code is used to find the best available professionals in your area.</p>
+                                </div>
+
+                                <!-- Step 2: Replace or Repair -->
+                                <div class="form-step" id="step2">
+                                    <h2 class="step-title">Do you need to replace or repair your windows?</h2>
+                                    <div class="option-grid">
+                                        <div class="option-card" onclick="selectOption('projectType', 'replace')">
+                                            <div class="option-icon">
+                                                <img src="https://homezies.com/wp-content/uploads/2025/11/Replace-Install.png" alt="Replace / Install">
+                                            </div>
+                                            <div class="option-label">Replace / Install</div>
+                                            <input type="radio" name="projectType" value="replace" id="projectType-replace" required>
+                                        </div>
+                                        <div class="option-card" onclick="selectOption('projectType', 'repair')">
+                                            <div class="option-icon">
+                                                <img src="https://homezies.com/wp-content/uploads/2025/11/Repair.png" alt="Repair">
+                                            </div>
+                                            <div class="option-label">Repair</div>
+                                            <input type="radio" name="projectType" value="repair" id="projectType-repair" required>
+                                        </div>
+                                    </div>
+                                    <div class="step-navigation">
+                                        <button type="button" class="btn-secondary" onclick="prevStep(2)">Back</button>
+                                        <button type="button" class="btn-primary" onclick="nextStep(2)">Next <span class="arrow-icon">→</span></button>
+                                    </div>
+                                    <p class="form-note">Why do we ask?<br>This information helps local professionals to provide you with the most accurate quote.</p>
+                                </div>
+
+                                <!-- Step 3: Number of Windows -->
+                                <div class="form-step" id="step3">
+                                    <h2 class="step-title">How many Windows are involved in your project?</h2>
+                                    <div class="option-list option-list-compact">
+                                        <div class="option-item option-item-compact" onclick="selectOption('windowCount', '1')">
+                                            <div class="option-label">1</div>
+                                            <input type="radio" name="windowCount" value="1" id="windowCount-1" required>
+                                        </div>
+                                        <div class="option-item option-item-compact" onclick="selectOption('windowCount', '2')">
+                                            <div class="option-label">2</div>
+                                            <input type="radio" name="windowCount" value="2" id="windowCount-2" required>
+                                        </div>
+                                        <div class="option-item option-item-compact" onclick="selectOption('windowCount', '3-5')">
+                                            <div class="option-label">3-5</div>
+                                            <input type="radio" name="windowCount" value="3-5" id="windowCount-3-5" required>
+                                        </div>
+                                        <div class="option-item option-item-compact" onclick="selectOption('windowCount', '6-9')">
+                                            <div class="option-label">6-9</div>
+                                            <input type="radio" name="windowCount" value="6-9" id="windowCount-6-9" required>
+                                        </div>
+                                        <div class="option-item option-item-compact" onclick="selectOption('windowCount', '10')">
+                                            <div class="option-label">10</div>
+                                            <input type="radio" name="windowCount" value="10" id="windowCount-10" required>
+                                        </div>
+                                    </div>
+                                    <div class="step-navigation">
+                                        <button type="button" class="btn-secondary" onclick="prevStep(3)">Back</button>
+                                        <button type="button" class="btn-primary" onclick="nextStep(3)">Next <span class="arrow-icon">→</span></button>
+                                    </div>
+                                    <p class="form-note">Why do we ask?<br>This information helps local professionals to provide you with the most accurate quote.</p>
+                                </div>
+
+                                <!-- Step 4: Homeowner -->
+                                <div class="form-step" id="step4">
+                                    <h2 class="step-title">Are you a Homeowner?</h2>
+                                    <div class="option-grid">
+                                        <div class="option-card" onclick="selectOption('homeowner', 'yes')">
+                                            <div class="option-icon">
+                                                <img src="https://homezies.com/wp-content/uploads/2025/11/Yes-removebg-preview.png" alt="Yes">
+                                            </div>
+                                            <div class="option-label">Yes</div>
+                                            <input type="radio" name="homeowner" value="yes" id="homeowner-yes" required>
+                                        </div>
+                                        <div class="option-card" onclick="selectOption('homeowner', 'no')">
+                                            <div class="option-icon">
+                                                <img src="https://homezies.com/wp-content/uploads/2025/11/No-removebg-preview.png" alt="No">
+                                            </div>
+                                            <div class="option-label">No</div>
+                                            <input type="radio" name="homeowner" value="no" id="homeowner-no" required>
+                                        </div>
+                                    </div>
+                                    <div class="step-navigation">
+                                        <button type="button" class="btn-secondary" onclick="prevStep(4)">Back</button>
+                                        <button type="button" class="btn-primary" onclick="nextStep(4)">Next <span class="arrow-icon">→</span></button>
+                                    </div>
+                                    <p class="form-note">Why do we ask?<br>This information helps the professional know if you're the homeowner for this project.</p>
+                                </div>
+
+                                <!-- Step 5: Timeline -->
+                                <div class="form-step" id="step5">
+                                    <h2 class="step-title">How quick do you need this done?</h2>
+                                    <div class="option-list option-list-compact option-list-2rows">
+                                        <div class="option-item option-item-compact" onclick="selectOption('timeline', 'immediately')">
+                                            <div class="option-label">Immediately</div>
+                                            <input type="radio" name="timeline" value="immediately" id="timeline-immediately" required>
+                                        </div>
+                                        <div class="option-item option-item-compact" onclick="selectOption('timeline', '1month')">
+                                            <div class="option-label">Within 1 month</div>
+                                            <input type="radio" name="timeline" value="1month" id="timeline-1month" required>
+                                        </div>
+                                        <div class="option-item option-item-compact" onclick="selectOption('timeline', '1-3months')">
+                                            <div class="option-label">1-3 months</div>
+                                            <input type="radio" name="timeline" value="1-3months" id="timeline-1-3months" required>
+                                        </div>
+                                        <div class="option-item option-item-compact" onclick="selectOption('timeline', '4-6months')">
+                                            <div class="option-label">4-6 months</div>
+                                            <input type="radio" name="timeline" value="4-6months" id="timeline-4-6months" required>
+                                        </div>
+                                        <div class="option-item option-item-compact" onclick="selectOption('timeline', '6plusmonths')">
+                                            <div class="option-label">6+ months</div>
+                                            <input type="radio" name="timeline" value="6plusmonths" id="timeline-6plusmonths" required>
+                                        </div>
+                                    </div>
+                                    <div class="step-navigation">
+                                        <button type="button" class="btn-secondary" onclick="prevStep(5)">Back</button>
+                                        <button type="button" class="btn-primary" onclick="nextStep(5)">Next <span class="arrow-icon">→</span></button>
+                                    </div>
+                                    <p class="form-note">Why do we ask?<br>This information helps the contractor understand the urgency and timeline of the project.</p>
+                                </div>
+
+                                <!-- Step 6: Location -->
+                                <div class="form-step" id="step6">
+                                    <h2 class="step-title">Where will this project take place?</h2>
+                                    <div class="form-group">
+                                        <label for="city">City</label>
+                                        <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="state">State</label>
+                                        <input type="text" id="state" name="state" placeholder="Enter your state" required>
+                                    </div>
+                                    <div class="step-navigation">
+                                        <button type="button" class="btn-secondary" onclick="prevStep(6)">Back</button>
+                                        <button type="button" class="btn-primary" onclick="nextStep(6)">Next <span class="arrow-icon">→</span></button>
+                                    </div>
+                                    <p class="form-note">Why do we ask?<br>Your address helps the contractor of where the project will take place.</p>
+                                </div>
+
+                                <!-- Step 7: Contact Name -->
+                                <div class="form-step" id="step7">
+                                    <h2 class="step-title">Who should we contact?</h2>
+                                    <p class="step-subtitle">Enter your name or representative for this project.</p>
+                                    <div class="form-group">
+                                        <label for="firstName">First Name</label>
+                                        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name</label>
+                                        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                                    </div>
+                                    <div class="step-navigation">
+                                        <button type="button" class="btn-secondary" onclick="prevStep(7)">Back</button>
+                                        <button type="button" class="btn-primary" onclick="nextStep(7)">Next <span class="arrow-icon">→</span></button>
+                                    </div>
+                                    <p class="form-note">Why do we ask?<br>This let's the contractor know who they're contacting for this project.</p>
+                                </div>
+
+                                <!-- Step 8: Final Contact Info -->
+                                <div class="form-step" id="step8">
+                                    <h2 class="step-title">Where should we send your matches?</h2>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                        <span class="error-message" id="emailError"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone</label>
+                                        <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                                        <span class="error-message" id="phoneError"></span>
+                                    </div>
+                                    <div class="form-group checkbox-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" id="terms" name="terms" required>
+                                            <span>By submitting this request, I agree to Homezies' Terms of Use & Privacy Policy and authorize home improvement and marketing companies, their contractors, and partners (our partners list), to send me offers via email as well as phone and text messages at the provided number. I agree to be contacted by the mentioned groups even if my contacts are registered in the "Do Not Call" lists. I agree that these marketing communications may be delivered to me with an automatic telephone dialing system or pre-recorded messages. I understand that my consent is not a purchase condition and that I may revoke it at any time. California Notice.</span>
+                                        </label>
+                                    </div>
+                                    <div class="step-navigation">
+                                        <button type="button" class="btn-secondary" onclick="prevStep(8)">Back</button>
+                                        <button type="submit" class="btn-primary">Submit</button>
+                                    </div>
+                                    <p class="form-note">Why do we ask?<br>This lets the contractor know how best to contact you.</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="how-it-works">
+            <div class="container">
+                <h2 class="section-title">How The Process Works</h2>
+                
+                <div class="content-text">
+                    <h3 class="section-subtitle">Replacement Window Deals In Your Area</h3>
+                    <p>Looking at replacing your home windows? Homezies Remodel can help you find the best deals from local window installers in your area. Let us know some details about your window needs & we can connect you with installers that service your zip code. <strong>Complete the form above to get your free window quotes today!</strong></p>
+                </div>
+
+                <div class="cta-button">
+                    <a href="#main-content" class="btn-secondary">Start Your Window Replacement Project</a>
+                </div>
+
+                <div class="info-sections">
+                    <div class="info-section accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <div class="info-section-content">
+                                <div class="info-icon">
+                                    <img src="https://homezies.com/wp-content/uploads/2025/11/Bathroom-Quotes.png" alt="Window Installation">
+                                </div>
+                                <div class="info-text">
+                                    <h4>Window Installation: What's the Difference?</h4>
+                                </div>
+                            </div>
+                            <span class="accordion-arrow">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>By comparing prices from licensed and neighborhood window installers, you'll receive personalized and competitive quotes. This ensures you receive high-quality service at a cost-effective rate. Just complete the form above, and you'll promptly have the opportunity to evaluate quotations from window replacement contractors in your area!</p>
+                        </div>
+                    </div>
+
+                    <div class="info-section accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <div class="info-section-content">
+                                <div class="info-icon">
+                                    <img src="https://homezies.com/wp-content/uploads/2025/11/Realities-of-Remodel.png" alt="Energy Savings">
+                                </div>
+                                <div class="info-text">
+                                    <h4>Less Energy, More Money</h4>
+                                </div>
+                            </div>
+                            <span class="accordion-arrow">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Windows equipped with advanced insulation and sealing technologies provide year-round energy savings. During the winter, they help to keep your home warm by preventing heat loss, while in the summer, they minimize heat gain, reducing the need for excessive air conditioning. This consistent energy efficiency ensures long-term cost savings on your utility bills. Want to learn more? Fill out the form above and we will connect you with a local window contractor within minutes! Check out the latest trends, new window costs, get free advice, and get a no-obligation Free Window Replacement Estimate!</p>
+                        </div>
+                    </div>
+
+                    <div class="info-section accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <div class="info-section-content">
+                                <div class="info-icon">
+                                    <img src="https://homezies.com/wp-content/uploads/2025/11/Bathroom-Remodeling.png" alt="Enhanced Security">
+                                </div>
+                                <div class="info-text">
+                                    <h4>Enhanced Security</h4>
+                                </div>
+                            </div>
+                            <span class="accordion-arrow">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Upgrading windows often come with advanced security features, such as reinforced frames and multiple locking points, which can increase the safety of your home. This added protection not only offers peace of mind but may also lead to potential insurance savings on your homeowner's policy. If you don't know, ask a pro! Get your new windows replacement estimate today.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-section accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <div class="info-section-content">
+                                <div class="info-icon">
+                                    <img src="https://homezies.com/wp-content/uploads/2025/11/Cost-And-Benefits.png" alt="Enhanced Curb Appeal">
+                                </div>
+                                <div class="info-text">
+                                    <h4>Enhanced Curb Appeal</h4>
+                                </div>
+                            </div>
+                            <span class="accordion-arrow">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>New windows can transform the look of your home, increasing its curb appeal and potentially its overall value. Whether you're planning to sell your property or just want it to look its best, fresh windows can make a significant difference in aesthetics. Connect with a Window Installation company and look at all the beautiful new features of all the top window manufacturers: Renewal By Anderson, Pella Windows, Milgard Windows, Simonton Windows, Provia, Window Nation, and others! Get a Free Windows Quote today!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-button">
+                    <a href="#main-content" class="btn-secondary">Start Your Home Project</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Residential Window Styles Section -->
+        <section id="popular-window-styles" class="popular-window-styles">
+            <div class="container">
+                <h2 class="section-title">Popular Residential Window Styles</h2>
+                
+                <div class="window-styles-grid">
+                    <div class="window-style-item">
+                        <div class="window-style-image">
+                            <img src="https://homezies.com/wp-content/uploads/2025/11/Double-Hung-Windows.png" alt="Double-hung Windows">
+                        </div>
+                        <h3 class="window-style-name">Double-hung</h3>
+                        <p class="window-style-description">Classic vertical sliding windows with two sashes that move independently for optimal ventilation control.</p>
+                    </div>
+
+                    <div class="window-style-item">
+                        <div class="window-style-image">
+                            <img src="https://homezies.com/wp-content/uploads/2025/11/Casement-Windows.png" alt="Casement Windows">
+                        </div>
+                        <h3 class="window-style-name">Casement</h3>
+                        <p class="window-style-description">Hinged windows that open outward like a door, providing unobstructed views and excellent ventilation.</p>
+                    </div>
+
+                    <div class="window-style-item">
+                        <div class="window-style-image">
+                            <img src="https://homezies.com/wp-content/uploads/2025/11/Bay-and-Bow-Windows.png" alt="Bay and Bow Windows">
+                        </div>
+                        <h3 class="window-style-name">Bay and Bow</h3>
+                        <p class="window-style-description">Angled three-panel windows that extend outward, creating additional interior space and panoramic views.</p>
+                    </div>
+
+                    <div class="window-style-item">
+                        <div class="window-style-image">
+                            <img src="https://homezies.com/wp-content/uploads/2025/11/Picture-Windows.png" alt="Picture Windows">
+                        </div>
+                        <h3 class="window-style-name">Picture</h3>
+                        <p class="window-style-description">Ideal for capturing panoramic views, picture windows create bright, open spaces. These fixed windows maximize natural light and energy efficiency.</p>
+                    </div>
+
+                    <div class="window-style-item">
+                        <div class="window-style-image">
+                            <img src="https://homezies.com/wp-content/uploads/2025/11/Sliding-Windows.png" alt="Sliding Windows">
+                        </div>
+                        <h3 class="window-style-name">Sliding</h3>
+                        <p class="window-style-description">Efficient and easy to operate, sliding windows work well in contemporary homes. Their horizontal operation makes them perfect for wide views and ventilation.</p>
+                    </div>
+
+                    <div class="window-style-item">
+                        <div class="window-style-image">
+                            <img src="https://homezies.com/wp-content/uploads/2025/11/Specialty-Windows.png" alt="Specialty Windows">
+                        </div>
+                        <h3 class="window-style-name">Specialty</h3>
+                        <p class="window-style-description">We also install specialty shapes and custom windows to meet unique architectural needs or personal preferences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Projects Section -->
+        <section id="latest-projects" class="latest-projects">
+            <div class="container">
+                <h2 class="section-title">Check Out Our Latest Projects!</h2>
+                <div class="projects-slider">
+                    <div class="slider-container">
+                        <div class="slider-track">
+                            <div class="project-slide active">
+                                <div class="project-image">
+                                    <img src="https://homezies.com/wp-content/uploads/2025/05/modsocial_a_modern_reading_nook_by_bay_windows_fb800795-7c39-4458-b5c2-333c243d04d8-1.jpeg" alt="Modern Windows Design">
+                                </div>
+                                <div class="project-overlay">
+                                    <h3>Modern Windows Design</h3>
+                                    <p>Elegant energy-efficient windows with contemporary styling</p>
+                                </div>
+                            </div>
+                            <div class="project-slide">
+                                <div class="project-image">
+                                    <img src="https://homezies.com/wp-content/uploads/2025/08/20250808-073041-file.png" alt="Bay Windows Installation">
+                                </div>
+                                <div class="project-overlay">
+                                    <h3>Bay Windows Installation</h3>
+                                    <p>Sophisticated bay windows with premium materials</p>
+                                </div>
+                            </div>
+                            <div class="project-slide">
+                                <div class="project-image">
+                                    <img src="https://homezies.com/wp-content/uploads/2025/05/windows-4-scaled.jpg" alt="Classic Windows Design">
+                                </div>
+                                <div class="project-overlay">
+                                    <h3>Classic Windows Design</h3>
+                                    <p>Timeless design with natural wood frames</p>
+                                </div>
+                            </div>
+                            <div class="project-slide">
+                                <div class="project-image">
+                                    <img src="https://homezies.com/wp-content/uploads/2025/05/windows-3.jpg" alt="Energy Efficient Windows">
+                                </div>
+                                <div class="project-overlay">
+                                    <h3>Energy Efficient Windows</h3>
+                                    <p>Modern windows with integrated smart home technology</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-btn slider-prev" onclick="moveSlide(-1)">❮</button>
+                    <button class="slider-btn slider-next" onclick="moveSlide(1)">❯</button>
+                    <div class="slider-dots">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles Section -->
+        <section id="articles" class="articles">
+            <div class="container">
+                <div class="articles-header">
+                    <h2 class="section-title">HOME VALUE, RESEARCH AND PLANNING, EXTERIOR, INSPIRATION</h2>
+                </div>
+                
+                <div class="articles-grid">
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://homezies.com/wp-content/uploads/2025/05/modsocial_a_modern_reading_nook_by_bay_windows_fb800795-7c39-4458-b5c2-333c243d04d8-1.jpeg" alt="Soundproof Windows">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-category">Window Replacement Quote</div>
+                            <h3 class="article-title">A Complete Guide on How Soundproof Windows Work—All You Need to Know Noise Canceling Windows</h3>
+                            <div class="article-meta">
+                                <span class="article-date">November 17, 2025</span>
+                                <span class="article-author">Svetlana L.</span>
+                            </div>
+                            <p class="article-excerpt">Do you ever hear cars zooming past, loud neighbors, barking dogs, or early-morning leaf blowers even when your windows are closed? You're not alone. Many homeowners assume noise is an unavoidable part of homeownership—but the truth is, the right soundproof…</p>
+                            <a href="#" class="article-link">Read more</a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://homezies.com/wp-content/uploads/2025/08/20250808-073041-file.png" alt="Storm Windows">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-category">Window Replacement Quote</div>
+                            <h3 class="article-title">Storm Windows vs Replacement Windows</h3>
+                            <div class="article-meta">
+                                <span class="article-date">November 14, 2025</span>
+                                <span class="article-author">Svetlana L.</span>
+                            </div>
+                            <p class="article-excerpt">If you're researching ways to improve the comfort, safety, and energy efficiency of your home, you've probably come across the debate of storm windows vs replacement windows. Homeowners in storm-prone areas—especially those along the East Coast, Texas, and Florida—often wonder…</p>
+                            <a href="#" class="article-link">Read more</a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://homezies.com/wp-content/uploads/2025/05/windows-4-scaled.jpg" alt="Window Installation">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-category">Window Replacement Quote</div>
+                            <h3 class="article-title">Common Window Installation Mistakes and How to Avoid Them</h3>
+                            <div class="article-meta">
+                                <span class="article-date">November 13, 2025</span>
+                                <span class="article-author">Svetlana L.</span>
+                            </div>
+                            <p class="article-excerpt">When it comes to replacing your windows, proper installation is just as important as choosing the right window style or frame material. Even the most energy-efficient or high-end replacement windows can fail to perform if they're not installed correctly. From…</p>
+                            <a href="#" class="article-link">Read more</a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://homezies.com/wp-content/uploads/2025/05/windows-3.jpg" alt="Vinyl Windows">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-category">Window Replacement Quote</div>
+                            <h3 class="article-title">Vinyl Window Maintenance: 5 Steps to Keep Your Windows Looking New</h3>
+                            <div class="article-meta">
+                                <span class="article-date">November 12, 2025</span>
+                                <span class="article-author">Svetlana L.</span>
+                            </div>
+                            <p class="article-excerpt">If you've chosen vinyl windows for your home, you've already taken a smart step toward long-lasting performance and low maintenance. Still, even the most durable windows need a little care to stay efficient, spotless, and streak-free. Below, we break down…</p>
+                            <a href="#" class="article-link">Read more</a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://homezies.com/wp-content/uploads/2025/05/modsocial_a_modern_reading_nook_by_bay_windows_fb800795-7c39-4458-b5c2-333c243d04d8-1.jpeg" alt="Window Styles">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-category">Window Replacement Quote</div>
+                            <h3 class="article-title">7 Window Styles for Maximizing Natural Light & Enhancing Curb Appeal</h3>
+                            <div class="article-meta">
+                                <span class="article-date">November 11, 2025</span>
+                                <span class="article-author">Svetlana L.</span>
+                            </div>
+                            <p class="article-excerpt">Choosing the right window style can transform your home—both inside and out. The best window styles don't just add beauty and boost curb appeal; they also fill your rooms with natural light, improve energy efficiency, and make your living spaces…</p>
+                            <a href="#" class="article-link">Read more</a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://homezies.com/wp-content/uploads/2025/05/windows-4-scaled.jpg" alt="Condensation on Windows">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-category">Window Replacement Quote</div>
+                            <h3 class="article-title">3 Causes of Condensation on Windows—How to Prevent Condensation on Windows</h3>
+                            <div class="article-meta">
+                                <span class="article-date">November 10, 2025</span>
+                                <span class="article-author">Svetlana L.</span>
+                            </div>
+                            <p class="article-excerpt">Waking up to foggy windows in the morning might seem harmless — but condensation on windows is a sign of excess moisture in your home. If left unchecked, this issue can damage your window frames, promote mold growth, and even…</p>
+                            <a href="#" class="article-link">Read more</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="see-more">
+                    <a href="#" class="see-more-link">See More Articles</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <!-- Upper Footer Section (Light Gray Background) -->
+        <div class="footer-content-wrapper">
+            <div class="container">
+                <div class="footer-content">
+                    <!-- Newsletter Signup -->
+                    <div class="footer-section footer-newsletter">
+                        <h3>Sign Up for Smart Home Updates</h3>
+                        <p>Get expert home improvement guides and cost-saving advice right in your inbox.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Email" required>
+                            <button type="submit" class="newsletter-btn">JOIN FREE NEWSLETTER</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Useful Links -->
+                    <div class="footer-section footer-useful-links">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li><a href="#">Solar</a></li>
+                            <li><a href="#">Bathroom</a></li>
+                            <li><a href="#">Windows</a></li>
+                            <li><a href="#">Plumbing</a></li>
+                            <li><a href="#">Gutters</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Project Planning & Estimate -->
+                    <div class="footer-section footer-project-planning">
+                        <h3>Project Planning</h3>
+                        <ul>
+                            <li><a href="#">Interior</a></li>
+                            <li><a href="#">Exterior</a></li>
+                            <li><a href="#">Other</a></li>
+                        </ul>
+                        <h3 class="footer-subsection-title">Estimate Project Cost</h3>
+                        <ul>
+                            <li><a href="#">Cost Calculators</a></li>
+                            <li><a href="#">Cost Guides</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Home Owner Tools & Support -->
+                    <div class="footer-section footer-tools-support">
+                        <h3>Home Owner Tools</h3>
+                        <ul>
+                            <li><a href="#">Home Owner Insights</a></li>
+                        </ul>
+                        <h3 class="footer-subsection-title">Support</h3>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                        <p>General Inquiries:<br><a href="mailto:chris@homezies.com">chris@homezies.com</a></p>
+                    </div>
+                </div>
+                
+                <!-- Bottom Row: Logo, Legal, Social -->
+                <div class="footer-bottom-row">
+                    <div class="footer-branding">
+                        <a href="https://homezies.com/" class="footer-logo-link">
+                            <img src="https://homezies.com/wp-content/uploads/2025/05/logo-v2-160x28.webp" alt="Homezies Logo" class="footer-logo-image">
+                        </a>
+                        <p>67 West Street,<br>Brooklyn, NY 11222<br><a href="tel:2016879276">(201) 687-9276</a><br>&copy; 2025 Homezies</p>
+                    </div>
+                    
+                    <div class="footer-legal-links">
+                        <p>
+                            <a href="https://homezies.com/privacy-notice/">Privacy Notice</a> | 
+                            <a href="https://homezies.com/terms-of-use/">Terms of Use</a> | 
+                            <a href="https://homezies.com/e-sign-consent-disclosure/">E-Sign Consent</a>
+                        </p>
+                        <p>
+                            This site is protected by reCAPTCHA and the Google 
+                            <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer noopener">Privacy Policy</a> and 
+                            <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer noopener">Terms of Service</a> apply.
+                        </p>
+                    </div>
+                    
+                    <div class="footer-social-icons">
+                        <a href="https://www.facebook.com/share/19Xq7Q9ehU/?mibextid=wwXIfr" aria-label="Facebook" target="_blank" rel="noopener noreferrer" class="footer-social-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20" height="20">
+                                <path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/homeziesusa/" aria-label="Linkedin" target="_blank" rel="noopener noreferrer" class="footer-social-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20" height="20">
+                                <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/homeziesofficial/" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="footer-social-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20" height="20">
+                                <path fill="currentColor" d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@Homeziesofficial" aria-label="YouTube" target="_blank" rel="noopener noreferrer" class="footer-social-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="20" height="20">
+                                <path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Footer Section (Dark Green Background) -->
+        <div class="footer-disclaimer-section">
+            <div class="container">
+                <p>This website offers a free service to assist homeowners in locating contractors within their vicinity. All contractors featured here are independent. This site does not provide any warranties or guarantees for the work carried out. It is the homeowner's responsibility to ensure that the hired contractor possesses the necessary licenses and insurance required for the work they are undertaking.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
